@@ -10,7 +10,7 @@ let maxOfTwoNumbers = (num1, num2) => {
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-let findLongestWord = arr => {
+let findLongestWord = (arr) => {
   let longestWord = ' ';  
 
   if(arr.length <= 0){
@@ -43,7 +43,7 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
  }
 
 // Iteration #4: Calculate the average
-let averageNumbers = nums => {
+let averageNumbers = (nums) => {
   if(nums.length <= 0){
      return null;
   }
@@ -55,7 +55,7 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-let averageWordLength = wordArr => {
+let averageWordLength = (wordArr) => {
    let totalWords = 0;
    if(wordArr.length <= 0){
     return null;
@@ -66,6 +66,37 @@ let averageWordLength = wordArr => {
    return totalWords / wordArr.length
 
 }
+
+  //Bonus #4--Avgof mixed elements--
+  //not yet passing the final return
+
+  let avg = (mixedArr) => {
+    let nums = [];
+    let words = [];
+    let avgWord;
+    let avgNum;
+    let totalOfAll;
+    if(mixedArr.length <= 0){
+      return null;
+     }
+     for (let i = 0; i < mixedArr.length; i++){
+       if (typeof mixedArr[i] !== 'number'){
+        words.push(mixedArr[i])
+       }else if (typeof mixedArr[i] !== 'string'){
+       nums.push(mixedArr[i])
+       }if (mixedArr[i] !== true){
+              nums.push(0)
+            }else {
+              nums.push(1)
+       }
+     }
+      avgWord = averageWordLength(words);
+      avgNum = averageNumbers(nums);
+     totalOfAll = avgWord + avgNum ;
+     return totalOfAll / 2
+  }
+
+  console.log(avg([6, 12, 'miami', 1, 'barca', '200', 'lisboa', 8, true]))
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -82,7 +113,13 @@ const wordsUnique = [
   'bring'
 ];
 
+
+
 let uniquifyArray = (arrWords) => {
+  let newArr = [ ];
+  if (arrWords.length <= 0){
+     return null;
+  }
 
 }
 
