@@ -1,5 +1,5 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers(num1, num2){
+let maxOfTwoNumbers = (num1, num2) => {
   if(num1 < num2){
     return num2;
   }else{
@@ -10,7 +10,7 @@ function maxOfTwoNumbers(num1, num2){
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord(arr){
+let findLongestWord = arr => {
   let longestWord = ' ';  
 
   if(arr.length <= 0){
@@ -43,7 +43,7 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
  }
 
 // Iteration #4: Calculate the average
-function averageNumbers(nums){
+let averageNumbers = nums => {
   if(nums.length <= 0){
      return null;
   }
@@ -55,7 +55,7 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength(wordArr){
+let averageWordLength = wordArr => {
    let totalWords = 0;
    if(wordArr.length <= 0){
     return null;
@@ -66,8 +66,6 @@ function averageWordLength(wordArr){
    return totalWords / wordArr.length
 
 }
-
-
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -83,6 +81,10 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
+let uniquifyArray = (arrWords) => {
+
+}
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
