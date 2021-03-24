@@ -30,7 +30,6 @@ let findLongestWord = (arr) => {
 }
 
 
-
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -93,7 +92,7 @@ let averageWordLength = (wordArr) => {
       avgWord = averageWordLength(words);
       avgNum = averageNumbers(nums);
      totalOfAll = avgWord + avgNum ;
-     return totalOfAll / 2
+     return totalOfAll/2
   }
 
   console.log(avg([6, 12, 'miami', 1, 'barca', '200', 'lisboa', 8, true]))
@@ -114,13 +113,17 @@ const wordsUnique = [
 ];
 
 
-
 let uniquifyArray = (arrWords) => {
-  let newArr = [ ];
-  if (arrWords.length <= 0){
+  let newArr = [];
+  if (arrWords.length == 0){
      return null;
   }
-
+  for (let i = 0; i < arrWords.length; i++){
+    if(newArr.indexOf(arrWords[i] )== -1){
+         newArr.push(arrWords[i])
+    }
+  }
+ return newArr
 }
 
 // Iteration #6: Find elements
