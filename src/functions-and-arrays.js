@@ -72,27 +72,11 @@ let averageWordLength = (wordArr) => {
   let avg = (mixedArr) => {
     let nums = [];
     let words = [];
-    let avgWord;
-    let avgNum;
-    let totalOfAll;
+    
     if(mixedArr.length <= 0){
       return null;
      }
-     for (let i = 0; i < mixedArr.length; i++){
-       if (typeof mixedArr[i] !== 'number'){
-        words.push(mixedArr[i])
-       }else if (typeof mixedArr[i] !== 'string'){
-       nums.push(mixedArr[i])
-       }if (mixedArr[i] !== true){
-              nums.push(0)
-            }else {
-              nums.push(1)
-       }
-     }
-      avgWord = averageWordLength(words);
-      avgNum = averageNumbers(nums);
-     totalOfAll = avgWord + avgNum ;
-     return totalOfAll/2
+    
   }
 
   console.log(avg([6, 12, 'miami', 1, 'barca', '200', 'lisboa', 8, true]))
@@ -187,3 +171,25 @@ const matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+let greatestProduct = (matrix) => {
+
+    let largest = 0;
+    let largestArr = [];
+
+    for(let i=0; i  < matrix.length; i++){
+      for(let j=0; j < matrix[i].length; j++){
+
+        if(largest < matrix[i][j]){
+          largest = matrix[i][j];
+        }
+        largestArr[i] = largest;
+      }      
+      largest = 1; 
+    }
+ 
+ return largestArr.reduce((acc , el) => {
+     return acc * el
+  }, 1)
+
+}
